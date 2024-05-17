@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from "cors";
-import { saltSuggestions } from './db';
+import { saltSuggestions } from './db.js';
 const app = express();
 
 app.use(cors())
