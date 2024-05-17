@@ -7123,14 +7123,20 @@ app.get('/api/products', (req, res) => {
         }
       };
       
-    //http://localhost:3000/api/product?search=Paracetamol
+    //http://localhost:3000/api/products?search=Paracetamol
     if(req.query.search){
-        const filterProduct=  products.data.saltSuggestions.filter(product => 
+        const filterProduct = products.data.saltSuggestions.filter(product => 
             product.salt.includes(req.query.search)
-)
+        );
+    // medicineSuggestions 
+    
         res.send(filterProduct);
         return ; //important
     }
+    // else {
+    //     // Handle case where search query is not provided
+    //     res.status(400).send("Search query is required");
+    // }
     
     //to simmulate the api 2s
     const timeout=2000
