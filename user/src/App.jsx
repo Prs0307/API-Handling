@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { apiCalls } from './services/api'
 
 function App() {
-  // const [products,setproducts]=useState([])
+  const [products,setproducts]=useState([])
   const[loading,setLoading]=useState(false)
   const [error,seterror]=useState(false)
 
